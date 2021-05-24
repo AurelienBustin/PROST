@@ -14,6 +14,11 @@ People who contributed to this code:
   - Olivier Jaubert (UCL, London, UK)
   - Freddy Odille (IADI, Nancy, France)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/59660095/119362824-6b454d00-bcad-11eb-83e5-2f1edd54bdc0.png">
+</p>
+
+
 Papers using this code:
 
     | 1) Bustin A, Ginami G, Cruz G, Correia T, Ismail TF, Rashid I, Neji R, Botnar RM, Prieto C
