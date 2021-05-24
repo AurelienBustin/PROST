@@ -45,12 +45,12 @@ This demo will help you denoise different types of images:
 
 The code requires the installation of the GSL library (See INSTALL_GSL file)
 
-# Results for Magnetic Resonance Fingerprinting images
+# Magnetic Resonance Fingerprinting image denoising
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59660095/119360898-5ff12200-bcab-11eb-823a-3999b206ca5e.png">
 </p>
 
-# Results for multi-contrast images
+# Multi-contrast image denoising
 <p align="center">
   <img src="https://user-images.githubusercontent.com/59660095/119360289-c0339400-bcaa-11eb-84bd-5417791f4014.png">
 </p>
