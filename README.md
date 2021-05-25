@@ -1,4 +1,4 @@
-# Demo for high-dimensionality patch-based denoising (PROST and HD-PROST)
+# Code and Demo for high-dimensionality patch-based denoising (PROST and HD-PROST)
 
 This demo file uses the Bustin_denoising_patch_mex_v4 package
 
