@@ -1,125 +1,115 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2513
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww14400\viewh9360\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+*************************
+Installation Instructions for GSL use with Matlab
+On Linux system
+See end of file for MAC version
+Aurelien Bustin (aurelien.bustin@ihu-liryc.fr)
+*************************
 
-\f0\fs24 \cf0 *************************\
-Installation Instructions for GSL use with Matlab\
-On Linux system\
-See end of file for MAC version\
-Aurelien Bustin (aurelien.bustin@ihu-liryc.fr)\
-*************************\
-\
-Go in your home directory: type \'91cd\'92 wherever you are\
-In the following example, I use the directory 
-\f1\b abu17 
-\f0\b0 but please replace it with your own directory\
-\
-1) Download GSL\
-\
-wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.3.tar.gz\
-\
-2) unpack the file with the following command:\
-\
-tar -zxvf gsl-2.3.tar.gz\
-\
-This will create a directory called gsl-2.3 in your home directory\
-\
-3) Change to this directory:\
-\
-cd gsl-2.3\
-\
-4) Configure the installation:\
-\
-mkdir /home/abu17/gsl\
-./configure \'97prefix=/home/abu17/gsl\
-\
-5) If there are no errors, compile the library (This step will take several minutes)\
-\
-make\
-\
-6) Check and test the library before installing it\
-\
-make check\
-\
-7) If there are no errors, install the library\
-\
-make install\
-\
-8) Copy library in path:\
-\
-sudo cp /home/abu17/gsl/lib/libgsl.a /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgsl.la /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgsl.so /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgsl.so.19 /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgsl.so.19.3.0 /usr/lib/\
-\
-sudo cp /home/abu17/gsl/lib/libgslcblas.a /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgslcblas.la /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgslcblas.so /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgslcblas.so.0 /usr/lib/\
-sudo cp /home/abu17/gsl/lib/libgslcblas.so.0.0.0 /usr/lib/\
-\
-9) Test the Library with the following example:\
-\
-Create the file example.c containing the following lines:\
-\
-#include <stdio.h>\
-#include <gsl/gsl_sf_bessel.h>\
-\
-int\
-main (void)\
-\{\
-    double x = 15.0;\
-    double y = gsl_sf_bessel_J0 (x);\
-    printf ("J0(%g) = %.18e\\n\'94, x, y);\
-    return 0;\
-\}\
-\
-10) Compile and link the program\
-\
-gcc -Wall -I/home/abu17/gsl-2.3/ -c example.c\
-\
-gcc -L/usr/lib/ example.o -lgsl -lgslcblas -lm\
-\
-./a.out\
-\
-\
-************************************************\
-INSTALLATION ON MAC\
-************************************************\
-\
-1) Install GSL:\
-brew install gsl\
-\
-2) Test the Library with the following example:\
-\
-Create the file example.c containing the following lines:\
-\
-#include <stdio.h>\
-#include <gsl/gsl_sf_bessel.h>\
-\
-int\
-main (void)\
-\{\
-    double x = 15.0;\
-    double y = gsl_sf_bessel_J0 (x);\
-    printf ("J0(%g) = %.18e\\n\'94, x, y);\
-    return 0;\
-\}\
-\
-10) Compile and link the program\
-\
-gcc -Wall -I/usr/local/include/gsl/ -c example.c\
-\
-gcc -L/usr/lib/ example.o -lgsl -lgslcblas -lm\
-\
-./a.out\
-\
-\
-\
-\
-\
+Go in your home directory: type ‘cd’ wherever you are
+In the following example, I use the directory abu17 but please replace it with your own directory
+
+1) Download GSL
+
+wget ftp://ftp.gnu.org/gnu/gsl/gsl-2.3.tar.gz
+
+2) unpack the file with the following command:
+
+tar -zxvf gsl-2.3.tar.gz
+
+This will create a directory called gsl-2.3 in your home directory
+
+3) Change to this directory:
+
+cd gsl-2.3
+
+4) Configure the installation:
+
+mkdir /home/abu17/gsl
+./configure —prefix=/home/abu17/gsl
+
+5) If there are no errors, compile the library (This step will take several minutes)
+
+make
+
+6) Check and test the library before installing it
+
+make check
+
+7) If there are no errors, install the library
+
+make install
+
+8) Copy library in path:
+
+sudo cp /home/abu17/gsl/lib/libgsl.a /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgsl.la /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgsl.so /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgsl.so.19 /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgsl.so.19.3.0 /usr/lib/
+
+sudo cp /home/abu17/gsl/lib/libgslcblas.a /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgslcblas.la /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgslcblas.so /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgslcblas.so.0 /usr/lib/
+sudo cp /home/abu17/gsl/lib/libgslcblas.so.0.0.0 /usr/lib/
+
+9) Test the Library with the following example:
+
+Create the file example.c containing the following lines:
+
+#include <stdio.h>
+#include <gsl/gsl_sf_bessel.h>
+
+int
+main (void)
+{
+    double x = 15.0;
+    double y = gsl_sf_bessel_J0 (x);
+    printf ("J0(%g) = %.18e\n”, x, y);
+    return 0;
 }
+
+10) Compile and link the program
+
+gcc -Wall -I/home/abu17/gsl-2.3/ -c example.c
+
+gcc -L/usr/lib/ example.o -lgsl -lgslcblas -lm
+
+./a.out
+
+
+************************************************
+INSTALLATION ON MAC
+************************************************
+
+1) Install GSL:
+brew install gsl
+
+2) Test the Library with the following example:
+
+Create the file example.c containing the following lines:
+
+#include <stdio.h>
+#include <gsl/gsl_sf_bessel.h>
+
+int
+main (void)
+{
+    double x = 15.0;
+    double y = gsl_sf_bessel_J0 (x);
+    printf ("J0(%g) = %.18e\n”, x, y);
+    return 0;
+}
+
+10) Compile and link the program
+
+gcc -Wall -I/usr/local/include/gsl/ -c example.c
+
+gcc -L/usr/lib/ example.o -lgsl -lgslcblas -lm
+
+./a.out
+
+
+
+
+
