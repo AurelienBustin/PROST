@@ -39,7 +39,7 @@ Papers using this code:
     
 This demo will help you denoise different types of images:
   1) Real-valued single-contrast 2D image
-  2) Real-valued single-contrast 2D images
+  2) Real-valued multi-contrast 2D images
   3) Complex-valued multi-contrast 2D MRI (MR fingerprinting images)
 
 
